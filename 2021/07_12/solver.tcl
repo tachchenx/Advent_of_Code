@@ -25,7 +25,6 @@ proc part1 {} {
 	puts "Minimum Fuel (Part 1): [set fuel]"
 }
 
-
 proc part2 {} {
 	variable single
 	set fuel 0
@@ -38,9 +37,7 @@ proc part2 {} {
 			if {$dist < 0} {
 				set dist [expr $dist * -1]
 			}
-			for {set j 1} {$j <= $dist} {incr j} {
-				incr used $j
-			}
+			set used [expr int(0.5 * $dist * [expr $dist +1])]
 			incr tmp_fuel $used
 		}
 
