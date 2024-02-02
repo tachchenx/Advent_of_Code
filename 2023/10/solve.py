@@ -41,7 +41,7 @@ def move (curr, dir):
 
      
 
-with open('input.txt') as f:
+with open('test.txt') as f:
 	lines = f.readlines()
 
 part1 = 0
@@ -84,11 +84,11 @@ while True:
     curr_pos = move(curr_pos, curr_dir)
     char = map[curr_pos[1]][curr_pos[0]]
     curr_dir = direction(char, curr_dir)
-    #os.system('cls')
-    #print(char, curr_pos, curr_dir)
-    #for line in map:
-    #    print("".join(line))
-    #time.sleep(0.25)
+    os.system('cls')
+    print(char, curr_pos, curr_dir)
+    for line in map:
+        print("".join(line))
+    time.sleep(0.5)
 
     if map[curr_pos[1]][curr_pos[0]] == "X":
         #print("ENDE", int(part1/2))
